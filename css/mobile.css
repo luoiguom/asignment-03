@@ -1,0 +1,121 @@
+/* ===== MOBILE (max 768px) ===== */ /* File mobile.css */
+@media screen and (max-width: 768px) {
+  /* Lệnh kích hoạt tối cao: Chỉ vận hành khi màn hình từ 768px trở xuống (Cỡ điện thoại) */
+  /* Banner */ /* Chú thích */
+  .banner {
+    /* Khối ảnh bìa */
+    height: 300px; /* Cắt phăng một nửa chiều cao, ép xuống còn 300px để không choán hết cái màn hình dọc của điện thoại */
+  } /* Kết thúc */
+  .banner-text h1 {
+    /* Chữ tiêu đề trên ảnh bìa */
+    font-size: 24px; /* Giảm size font xuống 24px cho khỏi bị tràn chữ ra ngoài */
+  } /* Kết thúc */
+
+  /* Navbar xếp dọc */ /* Chú thích */
+  .custom-navbar {
+    /* Thanh menu bao ngoài */
+    overflow: hidden; /* Cắt bỏ bất kỳ thành phần con nào dám ló đuôi thò đầu ra ngoài khỏi khuôn khổ thanh này */
+  } /* Kết thúc */
+  .custom-nav {
+    /* Khối chứa danh sách link */
+    flex-direction: column; /* Đảo ngược trận pháp Flexbox: Bẻ gãy hàng ngang, bắt các ô menu xếp đè lên nhau thành một trục dọc (cột) */
+    border: none; /* Tẩy luôn đường viền dọc vô dụng khi xếp thành cột */
+    width: 100%; /* Phóng to chiều rộng khối link bành trướng lấp kín 100% màn hình điện thoại */
+  } /* Kết thúc */
+  .custom-nav-item {
+    /* Từng ô chứa nút bấm menu */
+    border: none; /* Xóa viền 4 cạnh do laptop để lại */
+    border-bottom: 1px solid #eaeaeb; /* Bù lại bằng cách kẻ 1 đường vạch ngang dưới đáy mỗi ô để chia dòng cho menu mobile */
+    height: auto; /* Tháo bỏ gông cùm ép cao 80px, cho phép chiều cao co dãn tự động theo lượng chữ bên trong */
+    padding: 12px 20px; /* Đổi chuẩn đệm: Trên dưới lùi 12px, trái phải lùi 20px */
+    justify-content: flex-start; /* Ép chữ và icon không căn giữa nữa mà chạy dạt sát về lề bên trái (cho giống menu app mobile) */
+    width: 100%; /* Bắt mỗi ô dài kín màn hình ngang */
+  } /* Kết thúc */
+  /* Ẩn ô avatar trong navbar trên mobile */ /* Chú thích */
+  .custom-nav-avatar {
+    /* Khối avatar giữa menu */
+    display: none; /* Giấu nhẹm đi để khỏi phá đội hình dạng cột */
+  } /* Kết thúc */
+  .custom-nav-item a {
+    /* Link menu chữ */
+    display: flex; /* Dùng flexbox quy mô siêu nhỏ trong link */
+    align-items: center; /* Căn dọc */
+    gap: 10px; /* Tạo rãnh hở 10px kẹp giữa icon và chữ */
+  } /* Kết thúc */
+  .custom-nav-item i {
+    /* Icon fontello trên menu */
+    margin: 0; /* Khử margin lộn xộn */
+    font-size: 16px; /* Hạ size bé xuống 16px */
+  } /* Kết thúc */
+
+  /* Avatar */ /* Chú thích */
+  .avatar-img {
+    /* Ảnh avatar (Nếu có ở chỗ khác ngoài menu) */
+    position: static; /* Phế bỏ năng lực khinh công (absolute), bắt cái ảnh rớt xuống quy phục luồng chảy mặc định của tài liệu HTML */
+    display: block; /* Biến ảnh thành khối để dùng margin căn giữa */
+    margin: 20px auto; /* Tự động đẩy cân đối trái/phải cho cái ảnh vào giữa màn hình */
+    width: 100px; /* Co rút diện tích ảnh lại còn 100px vuông */
+    height: 100px; /* Co rút ảnh 100px vuông */
+    border: 4px solid #1ba0e2; /* Mỏng hóa đường viền ngoài xuống còn 4px, nhuộm xanh rực rỡ thay vì màu trắng mờ nhạt */
+  } /* Kết thúc */
+
+  /* Section 1 */ /* Chú thích */
+  .target, /* Khối target (không tồn tại trong HTML hiện có) */
+  .info {
+    /* Khối info */
+    padding: 25px 20px; /* Hạ thấp không gian trống xung quanh khối chữ */
+    height: auto; /* Chiều cao tự do để text không tràn mép đáy */
+  } /* Kết thúc */
+
+  /* Section 2 */ /* Chú thích */
+  .details-section {
+    /* Vùng CV */
+    margin: 20px auto; /* Thu hẹp khoảng cách giữa các khối lớn */
+  } /* Kết thúc */
+  .cv-box {
+    /* Thẻ CV (Kinh nghiệm, học vấn) */
+    padding: 20px; /* Rút bớt vùng trống trong thẻ xuống còn 20px */
+    margin-bottom: 0; /* Xóa margin dưới */
+  } /* Kết thúc */
+  .cv-container {
+    /* Bọc lề chung */
+    padding: 0 10px; /* Thu lề cực tiểu 10px, tận dụng từng milimet đất vàng trên mobile */
+  } /* Kết thúc */
+
+  /* Chứng chỉ: bỏ border trên mobile */ /* Chú thích */
+  .cert-border-right, /* Viền phải của chứng chỉ 1 */
+  .cert-border-left, /* Viền trái chứng chỉ 2 */
+  .cert-border-bottom {
+    /* Viền đáy của 3 chứng chỉ */
+    border: none; /* Thần chú xóa sổ mọi loại tường vây, viền ngăn cách giữa các chứng chỉ đã bị san phẳng */
+    border-bottom: 1px solid #e2d3b2; /* Châm chước, chỉ vẽ lại độc nhất 1 đường viền ngang mỏng nằm ở dưới đít mỗi tấm bằng */
+  } /* Kết thúc */
+  .cert-item {
+    /* Từng khối chứng chỉ */
+    padding: 20px 10px; /* Giảm đệm, ép chặt nội dung lại */
+  } /* Kết thúc */
+  .cert-img {
+    /* Ảnh chụp tấm bằng */
+    width: 100px; /* Thu bé bức ảnh lại 100px cho vừa mắt điện thoại */
+  } /* Kết thúc */
+
+  /* Dự án */ /* Chú thích */
+  .project-img {
+    /* Ảnh minh họa thẻ dự án */
+    height: 160px; /* Lùn hóa bức ảnh bìa dự án xuống 160px */
+  } /* Kết thúc */
+
+  /* Footer */ /* Chú thích */
+  .social-link {
+    /* Thẻ <a> chứa link MXH ở đáy trang */
+    margin: 0 10px; /* Kéo các icon MXH xích lại gần nhau hơn (10px mỗi bên) */
+  } /* Kết thúc */
+  .social-link i {
+    /* Cái icon Facebook/LinkedIn */
+    font-size: 28px; /* Giảm độ lớn icon xuống cho đỡ phô */
+  } /* Kết thúc */
+  .social-link span {
+    /* Text bên cạnh icon */
+    font-size: 13px; /* Ép chữ nhỏ lại xíu xiu 13px */
+  } /* Kết thúc */
+} /* Kết thúc đóng vùng Media Query của Mobile */

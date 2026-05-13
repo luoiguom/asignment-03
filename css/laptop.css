@@ -1,0 +1,472 @@
+/* ===== BANNER ===== */ /* Chú thích phân khu CSS */
+.banner {
+  /* Định dạng class cho khối chứa ảnh bìa toàn cục */
+  position: relative; /* Gắn mốc tọa độ quy chiếu tại đây để phần tử con (chữ) bám vào */
+  height: 600px; /* Ép cứng chiều cao ảnh bìa là 600 pixel không đổi */
+  text-align: center; /* Ra lệnh cho mọi phần tử văn bản bên trong căn chính giữa */
+} /* Kết thúc luật css của .banner */
+.banner img {
+  /* Nhắm tới thẻ ảnh <img> nằm trực tiếp bên trong khối .banner */
+  width: 100%; /* Bắt buộc bức ảnh phải dãn rộng lấp đầy 100% chiều ngang thẻ cha */
+  height: 100%; /* Bắt buộc bức ảnh lấp đầy 100% chiều cao thẻ cha */
+  object-fit: cover; /* Cắt xén phần ảnh thừa nếu tỷ lệ sai lệch, bảo vệ ảnh không bị bóp méo */
+} /* Kết thúc luật css */
+.banner-text {
+  /* Định dạng khối div bọc nội dung chữ tên/nghề nghiệp */
+  position: absolute; /* Rút khối này khỏi luồng hiển thị thường, lơ lửng bám theo tọa độ .banner */
+  top: 30%; /* Đẩy khối chữ cách đỉnh của .banner một khoảng bằng 30% chiều cao */
+  left: 50%; /* Đẩy khối chữ cách mép trái của .banner một khoảng bằng 50% chiều ngang */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Kéo khối chữ ngược lại 1 nửa kích thước chính nó để căn giữa tuyệt đối */
+  color: white; /* Nhuộm màu trắng tinh cho toàn bộ chữ bên trong để nổi bật trên nền ảnh */
+} /* Kết thúc luật css */
+
+/* ===== NAVBAR (đổi hết sang custom- để không đụng Bootstrap) ===== */ /* Chú thích gốc */
+.custom-navbar {
+  /* Khối div bọc ngoài cùng thanh menu */
+  display: flex; /* Bật chế độ dàn dòng Flexbox để kiểm soát các khối con dễ dàng */
+  justify-content: center; /* Đẩy cụm menu vào vị trí chính giữa trục ngang màn hình */
+  background-color: #fff; /* Trải thảm màu nền trắng cho toàn bộ thanh menu */
+} /* Kết thúc */
+.custom-nav {
+  /* Khối chứa các liên kết điều hướng */
+  display: flex; /* Ép các ô menu con (item) xếp hàng ngang liên tiếp nhau */
+  border-left: 1px solid #eaeaeb; /* Vẽ một nét viền dọc màu xám nhạt ở rìa trái cùng */
+} /* Kết thúc */
+.custom-nav-item {
+  /* Định dạng cho từng ô menu đơn lẻ (THÔNG TIN, LÝ LỊCH...) */
+  display: flex; /* Bật Flexbox để căn chỉnh chữ bên trong ô */
+  align-items: center; /* Căn chữ và icon nằm ngay giữa theo trục dọc dọc */
+  justify-content: center; /* Căn chữ và icon nằm giữa theo trục ngang */
+  padding: 0 40px; /* Thêm đệm vô hình 40px hai bên trái phải để tạo độ rộng, trên dưới 0px */
+  height: 80px; /* Cố định độ dày của thanh menu là 80 pixel */
+  border-right: 1px solid #eaeaeb; /* Kẻ viền xám ngăn cách bên phải mỗi ô */
+  border-top: 1px solid #eaeaeb; /* Kẻ viền xám ở cạnh trên của ô */
+  border-bottom: 1px solid #eaeaeb; /* Kẻ viền xám ở cạnh dưới của ô */
+} /* Kết thúc */
+.custom-nav-item a {
+  /* Định dạng trực tiếp cho đường link <a> bên trong các ô menu */
+  text-decoration: none; /* Tẩy xóa đường gạch chân mặc định cực kỳ mất thẩm mỹ của thẻ a */
+  color: #555; /* Nhuộm màu xám đậm cho chữ để nhìn dịu mắt */
+  font-weight: bold; /* Tăng lực nét bút, làm chữ in đậm lên */
+  font-size: 14px; /* Chỉnh kích cỡ font chữ xuống 14 pixel cho thanh thoát */
+} /* Kết thúc */
+.custom-nav-item a:hover {
+  /* Hiệu ứng giả (pseudo-class) khi con trỏ chuột lướt vào đường link */
+  color: #000; /* Lập tức đổi màu chữ thành đen tuyền (#000) để làm nổi bật */
+} /* Kết thúc */
+.custom-nav-avatar {
+  /* Định dạng riêng cho ô menu nằm giữa chứa ảnh Avatar */
+  position: relative; /* Gắn mốc tọa độ tại đây để ảnh Avatar bên trong có thể trồi lên trên mốc này */
+  padding: 0 160px; /* Tăng lớp đệm vô hình hai bên lên 160px để chừa một lỗ hổng thật rộng cho ảnh tròn */
+} /* Kết thúc */
+.custom-nav-item i {
+  /* Nhắm tới các thẻ chứa icon (fontello) trên menu */
+  color: #1ba0e2; /* Nhuộm màu xanh dương chủ đạo của giao diện cho các icon */
+} /* Kết thúc */
+.avatar-img {
+  /* Định dạng cho thẻ <img> đóng vai trò ảnh đại diện trên menu */
+  width: 160px; /* Ép chiều rộng bức ảnh đúng bằng 160 pixel */
+  height: 160px; /* Ép chiều cao bức ảnh đúng bằng 160 pixel (thành hình vuông) */
+  border-radius: 50%; /* Bo cong 4 góc 50% để gọt hình vuông thành hình tròn hoàn hảo */
+  border: 8px solid #fff; /* Bọc một lớp viền dày 8 pixel màu trắng bên ngoài ảnh tròn */
+  object-fit: cover; /* Chống méo ảnh nếu tỷ lệ gốc không phải là hình vuông */
+  position: absolute; /* Tách ảnh khỏi trật tự hàng lối, nổi lên trên và căn theo .custom-nav-avatar */
+  top: -80px; /* Kéo đẩy ảnh trồi lên trên thanh menu đúng 80 pixel (1/2 chiều cao ảnh) */
+  left: 50%; /* Dịch ảnh sang phải đến điểm giữa của ô chứa */
+  transform: translateX(
+    -50%
+  ); /* Kéo ảnh lùi lại đúng một nửa bề ngang của nó để cân bằng tuyệt đối ở giữa */
+  z-index: 10; /* Ban phát đặc quyền lớp nổi (layer) cao số 10, đảm bảo nó đè lên mọi thứ khác xung quanh */
+} /* Kết thúc */
+
+/* ===== SECTION 1: MỤC TIÊU & THÔNG TIN ===== */ /* Chú thích gốc */
+.target-info {
+  /* Định dạng vùng mục tiêu nghề nghiệp */
+  margin: 0; /* Xóa mọi khoảng cách lề bên ngoài để khối này ôm sát viền trình duyệt */
+} /* Kết thúc */
+.target-info ul {
+  /* Nhắm tới danh sách <ul> bên trong vùng mục tiêu */
+  list-style-type: none; /* Khử đi các dấu chấm tròn (bullet) đen xấu xí mặc định ở đầu mỗi dòng li */
+  padding: 0; /* Xóa khoảng lùi vào trong mặc định của thẻ ul do trình duyệt cấp */
+} /* Kết thúc */
+.target-info li {
+  /* Nhắm tới từng dòng <li> bên trong danh sách */
+  line-height: 1.5; /* Kéo dãn khoảng cách dòng lên gấp rưỡi để chữ dễ đọc hơn */
+} /* Kết thúc */
+.icons i {
+  /* Nhắm tới dàn icon mạng xã hội ở dưới thông tin cá nhân */
+  font-size: 20px; /* Cỡ chữ (ở đây là icon) to 20 pixel */
+  color: #1ba0e2; /* Nhuộm màu xanh lam chủ đạo */
+} /* Kết thúc */
+
+/* ===== SECTION 2: CV BOX (dùng cv-container thay container) ===== */ /* Chú thích gốc */
+.cv-container {
+  /* Khối bọc layout để khống chế độ rộng nội dung toàn trang */
+  max-width: 1000px; /* Giới hạn chiều rộng tối đa không bao giờ vượt qua 1000 điểm ảnh */
+  margin: 0 auto; /* Đẩy lề trên/dưới 0, trái/phải tự động (auto) san đều để đẩy toàn khối ra chính giữa web */
+  padding: 0 20px; /* Thêm đệm vô hình 20px ở hai bên đề phòng thu nhỏ màn hình chữ không đập vào mép */
+} /* Kết thúc */
+.details-section {
+  /* Vùng chứa 6 thẻ CV (Học vấn, Kinh nghiệm...) */
+  margin: 40px auto; /* Tách lề trên/dưới 40px cho thoáng, tiếp tục căn giữa trái/phải auto */
+} /* Kết thúc */
+.cv-box {
+  /* Định dạng hình thái cho từng chiếc thẻ (box) CV đơn lẻ */
+  border: 1px solid #e0e0e0; /* Kẻ một đường viền siêu mỏng 1px màu xám tro bao quanh thẻ */
+  padding: 30px; /* Đệm từ mép viền vào trong chữ 30px ở cả 4 chiều cho không gian thở */
+  background-color: #fff; /* Đổ nền thẻ màu trắng tinh */
+  height: 100%; /* Ép thẻ phải dài dãn ra lấp đầy 100% chiều cao của cột chứa nó (tránh lệch thẻ cao thẻ thấp) */
+} /* Kết thúc */
+.col-header {
+  /* Phần đầu chứa tiêu đề và icon của mỗi thẻ CV */
+  display: grid; /* Sử dụng kỹ thuật Lưới (Grid) để chia cột linh hoạt hơn Flexbox */
+  grid-template-columns: 3fr 1fr; /* Chia đầu thẻ thành 2 cột: Cột chữ chiếm 3 phần, cột icon chiếm 1 phần */
+  align-items: flex-end; /* Ép chữ và icon nằm sát xuống đáy (bottom) của phần header này */
+  margin-bottom: 20px; /* Đẩy phần thân thẻ phía dưới cách xa header này 20px */
+  border-bottom: 1px solid #e0e0e0; /* Kẻ gạch ngang dưới đáy header để phân tách rạch ròi với phần thân */
+  padding-bottom: 15px; /* Thêm đệm 15px ở đáy trước khi tới đường gạch ngang */
+} /* Kết thúc */
+.card-title h2 {
+  /* Tiêu đề thẻ (ví dụ: Kinh nghiệm) */
+  margin: 0; /* Xóa lề mặc định của thẻ h2 để dễ căn chỉnh */
+  font-size: 24px; /* Size chữ khá to: 24 pixel */
+  color: #333; /* Chữ màu xám gần đen (#333) để bớt gắt hơn đen tuyền (#000) */
+  line-height: 1; /* Ép khoảng cách dòng hẹp lại đúng bằng 1 lần kích thước chữ */
+} /* Kết thúc */
+.icon-card i {
+  /* Icon to đùng trên góc phải của thẻ CV */
+  font-size: 40px; /* Tăng siêu to khổng lồ lên 40px */
+  color: #888; /* Màu xám trung tính, không giật spotlight của tiêu đề */
+  line-height: 1; /* Tránh icon bị xô lệch vị trí so với chữ do line-height thừa */
+} /* Kết thúc */
+
+/* cv-body thay card-body để tránh đụng Bootstrap */ /* Chú thích gốc */
+.cv-body {
+  /* Khối chứa thông tin chi tiết */
+  padding: 0; /* Reset padding về 0 vì bản thân .cv-box đã có padding 30px rồi */
+} /* Kết thúc */
+
+.job-title {
+  /* Tên công ty/Tên trường học */
+  font-size: 16px; /* Cỡ chữ 16px (chuẩn văn bản web) */
+  color: #333; /* Màu đen xám */
+  margin-bottom: 5px; /* Cách dòng thời gian bên dưới 5px */
+} /* Kết thúc */
+.date-badge {
+  /* Cục nhãn "Hiện tại" trên mục Kinh nghiệm */
+  display: inline-block; /* Hành xử như text nhưng vẫn cho set chiều rộng/cao/padding */
+  background-color: #1ba0e2; /* Đổ màu nền xanh lam */
+  color: #fff; /* Chữ trắng lọt lòng nền xanh */
+  font-size: 12px; /* Chữ nhỏ nhắn 12px */
+  padding: 2px 14px; /* Đệm trên dưới 2px, trái phải 14px cho ra hình viên thuốc */
+  border-radius: 5px; /* Bo nhẹ 4 góc viên thuốc 5px */
+  margin-bottom: 10px; /* Đẩy mô tả bên dưới ra xa 10px */
+} /* Kết thúc */
+.timeline-item p {
+  /* Nhắm tới các thẻ đoạn văn mô tả kinh nghiệm/học vấn */
+  font-size: 14px; /* Cỡ chữ mô tả nhỏ 14px */
+  color: #666; /* Chữ màu xám nhạt để nhấn mạnh sự phụ thuộc vào title */
+  line-height: 1.6; /* Dãn dòng 1.6 cho dễ đọc */
+} /* Kết thúc */
+.timeline-row {
+  /* Hàng chứa tiêu đề (có gắn viên bi xanh bên hông) */
+  position: relative; /* Gắn mốc tọa độ quy chiếu cho viên bi xanh bám vào */
+} /* Kết thúc */
+.timeline-row::before {
+  /* Phần tử ảo (pseudo-element) dùng để vẽ viên bi xanh mà không cần thẻ HTML */
+  content: ""; /* Bắt buộc phải có để pseudo-element hiển thị, dù là chuỗi rỗng */
+  position: absolute; /* Neo lơ lửng bám theo tọa độ của thẻ cha (.timeline-row) */
+  left: -25px; /* Kéo tuột viên bi ra bên ngoài lề trái 25px */
+  top: 4px; /* Canh chỉnh viên bi tụt xuống 4px cho ngang hàng với dòng text */
+  width: 9px; /* Viên bi rộng 9px */
+  height: 9px; /* Viên bi cao 9px (hình vuông) */
+  background-color: #1ba0e2; /* Nhuộm màu xanh lam cho bi */
+  border-radius: 50%; /* Bo tròn 50% gọt vuông thành tròn */
+} /* Kết thúc */
+
+/* ===== SỞ THÍCH ===== */ /* Chú thích gốc */
+.icon-hobby {
+  /* Khối chứa 4 cái icon sở thích ngang hàng */
+  display: flex; /* Dùng Flexbox dàn hàng ngang */
+  justify-content: space-between; /* Lệnh rải 4 icon cách đều nhau tận dụng tối đa chiều rộng thẻ */
+  margin-top: 20px; /* Cách xa phần tiêu đề phía trên 20px */
+} /* Kết thúc */
+.ic {
+  /* Từng khối chứa 1 icon + 1 chữ text */
+  display: flex; /* Bật Flexbox để chỉnh cột */
+  flex-direction: column; /* Ép icon và chữ xếp hàng dọc (trên/dưới) thay vì ngang */
+  align-items: center; /* Căn thẳng hàng icon và chữ vào chính giữa trục đứng */
+} /* Kết thúc */
+.icon-hobby i {
+  /* Định dạng vòng tròn chứa icon sở thích */
+  display: flex; /* Tiếp tục xài Flexbox trên icon */
+  justify-content: center; /* Đẩy nội dung icon vào giữa lõi hình tròn (chiều ngang) */
+  align-items: center; /* Đẩy icon vào lõi hình tròn (chiều dọc) */
+  width: 50px; /* Đường kính 50px */
+  height: 50px; /* Đường kính 50px */
+  font-size: 20px; /* Size của icon bên trong là 20px */
+  color: #888; /* Màu icon xám */
+  border: #1ba0e2 1px solid; /* Vẽ một vòng tròn viền ngoài màu xanh lam mỏng 1px */
+  border-radius: 50%; /* Lệnh bo tròn 100% để biến thẻ hình vuông thành vòng tròn */
+} /* Kết thúc */
+.icon-hobby p {
+  /* Tên của sở thích (Âm nhạc, Nấu ăn...) */
+  text-align: center; /* Căn giữa chữ dưới icon */
+  margin-top: 10px; /* Cách mép dưới của vòng tròn icon 10px */
+  font-size: 14px; /* Chữ nhỏ 14px */
+  color: #666; /* Màu xám */
+} /* Kết thúc */
+
+/* ===== KỸ NĂNG ===== */ /* Chú thích gốc */
+.skill-item {
+  /* Danh sách chứa toàn bộ thanh kỹ năng */
+  margin-bottom: 25px; /* Cách đáy khối cha 25px */
+} /* Kết thúc */
+.skill-item p {
+  /* Tên kỹ năng (HTML/CSS, Nodejs...) */
+  font-size: 14px; /* Chữ size 14px */
+  color: #333; /* Đen nhạt */
+  margin-bottom: 8px; /* Tên kỹ năng cách thanh level bên dưới 8px */
+} /* Kết thúc */
+.skill-bars {
+  /* Khối chứa 3 cục vạch level */
+  display: flex; /* Dàn ngang 3 vạch */
+  gap: 10px; /* Lệnh siêu năng của Flex: tạo rãnh cách ly giữa 3 vạch đúng 10px mà không cần dùng margin */
+  margin-bottom: 12px; /* Cách kỹ năng tiếp theo bên dưới 12px */
+} /* Kết thúc */
+.bar {
+  /* Khởi tạo ngoại hình cho vạch level (thể hiện kỹ năng kém) */
+  flex: 1; /* Lệnh ép cả 3 vạch chia đều nhau, mỗi vạch dài đúng bằng 1 phần 3 khoảng trống */
+  height: 3px; /* Chiều dày của vạch là 3 điểm ảnh */
+  background-color: #f0f0f0; /* Đổ màu nền xám tro mờ nhạt (chưa đạt level) */
+  border-radius: 2px; /* Bo hơi tròn nhẹ ở 2 đầu vạch */
+} /* Kết thúc */
+.bar.active {
+  /* Class ghi đè cho những vạch level đã đạt được */
+  background-color: #1ba0e2; /* Nhuộm màu xanh lam rực rỡ để thể hiện sự thông thạo */
+} /* Kết thúc */
+
+/* ===== SECTION 3: CHỨNG CHỈ ===== */ /* Chú thích gốc */
+.awards-section {
+  /* Phân vùng bao phủ cả dải chứng chỉ ngang màn hình */
+  background-color: #f4f4f4; /* Nhuộm xám nhạt toàn dải để tách biệt hoàn toàn với vùng Kinh nghiệm nền trắng ở trên */
+  padding: 50px 0; /* Tạo lớp đệm rất dày trên và dưới (50px) để khu vực thêm hoành tráng */
+  margin-top: 40px; /* Đẩy khối này cách xa khối ở trên 40px nữa */
+} /* Kết thúc */
+.section-title {
+  /* Tiêu đề lớn (Chứng chỉ - Giải thưởng / Dự án) */
+  font-size: 28px; /* Cỡ chữ to 28px */
+  color: #333; /* Màu đen nhạt */
+  margin-bottom: 30px; /* Cách phần lõi 30px */
+  font-weight: normal; /* Không in đậm tiêu đề, nhìn sẽ "tây" và sang hơn */
+} /* Kết thúc */
+.cert-item {
+  /* Từng thẻ chứa chứng chỉ riêng lẻ */
+  display: flex; /* Bật Flexbox để ảnh chứng chỉ và phần chữ nằm xếp ngang cạnh nhau */
+  gap: 20px; /* Tạo khe rãnh tàng hình 20px nhét giữa ảnh và khối chữ */
+  padding: 30px 20px; /* Đệm xung quanh thẻ chứng chỉ: trên dưới 30px, trái phải 20px */
+} /* Kết thúc */
+.cert-border-right {
+  /* Tiện ích: vẽ viền ngăn cách bên phải (chứng chỉ 1) */
+  border-right: 1px solid #e2d3b2; /* Kẻ vạch dọc màu vàng cát */
+} /* Kết thúc */
+.cert-border-left {
+  /* Tiện ích: vẽ viền ngăn cách bên trái (chứng chỉ 2) */
+  border-left: 1px solid #e2d3b2; /* Kẻ vạch dọc màu vàng cát, ghép với vạch phải tạo thành 1 dải phân cách x2 */
+} /* Kết thúc */
+.cert-border-bottom {
+  /* Tiện ích: vẽ gạch chân đáy */
+  border-bottom: 2px solid #e2d3b2; /* Kẻ vạch ngang màu vàng cát ở đáy mỗi thẻ chứng chỉ */
+} /* Kết thúc */
+.cert-img {
+  /* Ảnh chụp tấm chứng chỉ */
+  width: 140px; /* Ép kích thước ảnh nhỏ gọn lại 140px */
+  height: auto; /* Chiều cao tự động co dãn theo tỷ lệ gốc để không bị bóp méo hình */
+  border: 1px solid #ddd; /* Đóng một khung tranh màu xám mỏng manh cho cái ảnh */
+  object-fit: cover; /* Đảm bảo an toàn không méo góc rách viền */
+} /* Kết thúc */
+.cert-info h3 {
+  /* Tiêu đề tên của chứng chỉ */
+  font-size: 15px; /* Chữ 15px */
+  color: #333; /* Đen nhạt */
+  margin-top: 0; /* Xóa lề trên mặc định của heading 3 */
+  margin-bottom: 12px; /* Đẩy mô tả bên dưới ra xa 12px */
+} /* Kết thúc */
+.cert-info p {
+  /* Dòng văn bản ghi GPA của chứng chỉ */
+  font-size: 14px; /* Chữ 14px */
+  color: #777; /* Màu xám xịt nhạt nhòa */
+  margin: 6px 0; /* Cách trên dưới mỗi dòng 6px */
+} /* Kết thúc */
+
+/* ===== SECTION 4: DỰ ÁN ===== */ /* Chú thích gốc */
+.projects-section {
+  /* Vùng bọc danh sách các sản phẩm (projects) */
+  padding: 40px 0; /* Lót đệm trên dưới 40px */
+} /* Kết thúc */
+.project-item {
+  /* Từng cái thẻ card giới thiệu 1 dự án riêng */
+  border: 1px solid #e0e0e0; /* Viền xám mỏng bọc quanh thẻ */
+  background-color: #fff; /* Nền card màu trắng */
+  display: flex; /* Bật Flexbox ở dạng khối */
+  flex-direction: column; /* Quan trọng: Đổi Flexbox từ nằm ngang sang chiều dọc (cột) để chứa nội dung trên xuống dưới */
+  height: 100%; /* Ép các thẻ có nội dung ngắn/dài khác nhau phải cao bằng nhau lấp đầy hàng ngang grid */
+} /* Kết thúc */
+.project-img {
+  /* Ảnh minh họa thumbnail cho dự án (nằm trên cùng của thẻ) */
+  width: 100%; /* Phình to lấp hết bề ngang của thẻ */
+  height: 200px; /* Khống chế chiều cao chính xác 200px (tạo sự đồng đều) */
+  object-fit: cover; /* Chặt bỏ những phần ảnh dư thừa ra khỏi 200px chiều cao mà không phá tỷ lệ */
+} /* Kết thúc */
+.project-info {
+  /* Khối chứa toàn bộ chữ nghĩa bên dưới bức ảnh thumbnail */
+  display: flex; /* Dùng flexbox dọc */
+  flex-direction: column; /* Ép dọc */
+  flex-grow: 1; /* Cốt lõi: Lệnh này bảo khối thông tin 'hãy dãn dài ra tối đa để lấp đầy khoảng trống bên dưới', giúp thẻ cân bằng */
+} /* Kết thúc */
+.project-title {
+  /* Phân vùng bọc thẻ tiêu đề dự án */
+  padding: 20px 15px; /* Thêm padding trên dưới 20px, trái phải 15px */
+} /* Kết thúc */
+.project-title h3 {
+  /* Trực tiếp nhắm vào heading 3 tên dự án */
+  margin: 0; /* Xóa margin mặc định */
+  font-size: 16px; /* Size 16px */
+  color: #333; /* Đen nhạt */
+  font-weight: normal; /* Không in đậm (thin font) */
+} /* Kết thúc */
+.project-meta {
+  /* Khối chứa thông tin metadata (Năm làm, vai trò dev) */
+  display: flex; /* Nằm ngang */
+  align-items: center; /* Căn giữa trục dọc */
+  gap: 20px; /* Cách đều các icon một khoảng 20px */
+  padding: 15px 20px; /* Đệm xung quanh */
+  border-top: 1px solid #e0e0e0; /* Vạch một đường thẳng phân cách khối này với khối tiêu đề phía trên */
+} /* Kết thúc */
+/* Thuần hóa thẻ a (link dự án) */ /* Chú thích gốc */
+.project-link {
+  /* Định dạng thẻ a bao quanh tên dự án */
+  text-decoration: none; /* Khử gạch chân truyền thống của link */
+  color: inherit; /* Bí kíp kế thừa: Ra lệnh thẻ a KHÔNG có màu riêng mà phải lấy cắp màu của thẻ cha (h3) */
+} /* Kết thúc */
+.project-link:hover span {
+  /* Khi lia chuột vào thẻ a, thì cái chữ nằm trong <span> sẽ bị thao túng */
+  color: #1ba0e2; /* Tỏa sáng thành màu xanh lam quen thuộc */
+} /* Kết thúc */
+.year-badge {
+  /* Con dấu đánh dấu năm thực hiện dự án (2021) */
+  background-color: #1ba0e2; /* Nền xanh lam */
+  color: #fff; /* Chữ năm màu trắng nổi bật */
+  font-size: 13px; /* Chữ nhỏ gọn */
+  padding: 4px 15px; /* Đệm trái phải dài ra xíu để tạo hình viên thuốc */
+  border-radius: 20px; /* Bo góc cực gắt (20px) cho tròn lẳn như hạt lạc */
+} /* Kết thúc */
+.project-meta .ic {
+  /* Định dạng icon vai trò DEV */
+  flex-direction: row; /* Dàn hàng ngang (dù mặc định thẻ div đã rớt dòng, nhưng nó nằm trong flex cha) */
+  gap: 6px; /* Nhích icon và text xa nhau ra 6px */
+  color: #777; /* Màu xám xịt */
+  font-size: 14px; /* Size chữ nhỏ */
+} /* Kết thúc */
+.project-desc {
+  /* Khối bảng biểu mô tả (Mô tả, Nhiệm vụ, Công nghệ) */
+  display: flex; /* Flex dọc */
+  flex-direction: column; /* Flex dọc */
+  flex-grow: 1; /* Lệnh ăn gian độ cao, bắt khối này dãn phình to lấp đầy đáy thẻ card */
+} /* Kết thúc */
+.desc-row {
+  /* Một hàng trên bảng biểu (gồm 2 cột Trái - Phải) */
+  display: grid; /* Sử dụng pháp trận Grid thay cho Flexbox ở đây để cột chữ không bị xô lệch */
+  grid-template-columns: 80px 1fr; /* Khóa chết cột nhãn (bên trái) luôn là 80px. Cột nội dung (bên phải) 1fr = ôm trọn phần còn lại! */
+  border-top: 1px solid #e0e0e0; /* Vẽ vạch ngang đỉnh hàng */
+} /* Kết thúc */
+.desc-label {
+  /* Cột nhãn bên trái (Chữ 'Mô tả', 'Nhiệm vụ'...) */
+  padding: 12px; /* Đệm xung quanh */
+  color: #555; /* Màu xám */
+  font-size: 13px; /* Size nhỏ */
+  border-right: 1px solid #e0e0e0; /* Vẽ đường vạch dọc chia cắt cột trái với cột phải */
+} /* Kết thúc */
+.desc-content {
+  /* Cột nội dung bên phải (Chi tiết công nghệ, tính năng...) */
+  padding: 12px; /* Đệm xung quanh */
+  color: #666; /* Màu xám */
+  line-height: 1.5; /* Dãn dòng rưỡi đọc cho thoáng */
+  font-size: 13px; /* Size nhỏ bằng cột trái */
+} /* Kết thúc */
+
+/* ===== FOOTER ===== */ /* Chú thích gốc */
+.footer-socials {
+  /* Vùng gác chân trang web, chứa các link MXH */
+  text-align: center; /* Ra lệnh các icon phải tập hợp ra chính giữa */
+  padding: 40px 0; /* Làm dày footer lên (40px trên dưới) */
+  background-color: #f9f9f9; /* Phủ một lớp màu nền xám cực kỳ nhạt, gần như trắng */
+} /* Kết thúc */
+.social-link {
+  /* Mỗi một link Facebook, LinkedIn... */
+  display: inline-block; /* Bật mode hiển thị thành khối nhưng vẫn xếp trên một hàng */
+  text-decoration: none; /* Khử gạch chân */
+  margin: 0 25px; /* Ép các link cách xa nhau ra 50px (25 trái + 25 phải) */
+} /* Kết thúc */
+.social-link i {
+  /* Vòng tròn icon của link MXH */
+  font-size: 38px; /* Tăng cỡ chữ để icon phình to ra cực đại */
+  color: #1ba0e2; /* Nhuộm màu thương hiệu (xanh dương) */
+  vertical-align: middle; /* Ép icon này ngang hàng với đoạn text bên cạnh (nếu có) không bị lọt thỏm */
+  margin-right: 8px; /* Cách chữ bên phải 8px */
+} /* Kết thúc */
+.social-link span {
+  /* Chữ tên MXH (như 'Facebook') */
+  color: #999; /* Xám nhạt */
+  font-size: 16px; /* Size 16px */
+  font-weight: normal; /* Không in đậm */
+  vertical-align: middle; /* Căn giữa dòng với icon */
+  transition: color 0.3s ease; /* Bí thuật hoạt họa: Mất 0.3 giây để quá trình đổi màu (khi hover) diễn ra từ từ mượt mà thay vì chớp nhoáng */
+} /* Kết thúc */
+.social-link:hover span {
+  /* Cảm biến hover chuột lên link */
+  color: #1ba0e2; /* Chữ nhấp nháy chuyển sang màu xanh lam rực rỡ */
+} /* Kết thúc */
+
+/* Javascript */ /* Chú thích gốc */
+.hide {
+  /* Class phục vụ luồng điều khiển của JS */
+  display: none !important; /* Xóa sổ thẻ HTML khỏi luồng hiển thị, dùng important để cấm mọi class khác chống đối lệnh này */
+} /* Kết thúc */
+/* Mặc định giấu cái nút đi */ /* Chú thích gốc */
+.view-more-btn {
+  /* Nút bấm hiện nội dung */
+  display: none; /* Mặc định ngưng đọng, vô hình trên trang */
+} /* Kết thúc */
+
+/* Khi hover chuột vào TRONG KHU VỰC của .timeline-item, thì cái nút .view-more-btn ở bên trong nó mới hiện ra */ /* Chú thích gốc */
+.timeline-item:hover .view-more-btn, /* Trigger 1: Chuột vào vùng timeline */
+.cv-box:hover .view-more-btn {
+  /* Trigger 2: Chuột lượn lờ trong thẻ CV */
+  display: inline-block; /* Hóa giải thuật tàng hình, nút bấm tái xuất giang hồ */
+} /* Kết thúc */
+.btn-primary {
+  /* Can thiệp sâu vào class cốt lõi của Bootstrap, đánh tráo các giá trị màu mặc định bằng biến CSS (--bs) */
+  --bs-btn-bg: #1ba0e2; /* Màu nền mặc định (Xanh chủ đạo) */
+  --bs-btn-border-color: #1ba0e2; /* Màu viền mặc định (Xanh chủ đạo) */
+  --bs-btn-hover-bg: #1584b8; /* Màu nền khi di chuột vào (tối hơn 1 chút cho cảm giác bấm) */
+  --bs-btn-hover-border-color: #1584b8; /* Viền khi hover cũng tối lại tương ứng */
+  --bs-btn-active-bg: #1584b8; /* Màu khi nhấn giữ nút chuột (click click) */
+  --bs-btn-active-border-color: #1584b8; /* Viền khi nhấn giữ */
+} /* Kết thúc */
+
+/* 2. Nút View More (Nút viền xanh, nền trong suốt) */ /* Chú thích gốc */
+.btn-outline-primary {
+  /* Can thiệp tráo biến của nút loại Outline (Nút có viền rỗng) của Bootstrap */
+  --bs-btn-color: #1ba0e2; /* Màu chữ ban đầu khi rỗng ruột (Xanh lam) */
+  --bs-btn-border-color: #1ba0e2; /* Màu viền ban đầu (Xanh lam) */
+  --bs-btn-hover-bg: #1ba0e2; /* Di chuột vào thì đổ đầy nền màu xanh lam lấp kín khoảng rỗng */
+  --bs-btn-hover-border-color: #1ba0e2; /* Viền khi hover (giữ xanh lam) */
+  --bs-btn-hover-color: #fff; /* Di chuột vào thì chữ phải hóa trắng để không bị chìm vào nền xanh */
+  --bs-btn-active-bg: #1ba0e2; /* Nền khi bấm giữ (xanh lam) */
+  --bs-btn-active-border-color: #1ba0e2; /* Viền khi bấm giữ (xanh lam) */
+  --bs-btn-active-color: #fff; /* Chữ khi bấm giữ (trắng) */
+} /* Kết thúc */

@@ -1,0 +1,44 @@
+/* Can thiệp vào gốc (root) của toàn bộ trang web */
+:root {
+  /* Thay đổi màu primary gốc thành màu xanh thương hiệu của em */
+  --bs-primary: #1ba0e2;
+
+  /* BÍ KÍP: Bootstrap 5 cần thêm mã RGB để tính toán độ trong suốt (opacity) */
+  /* Mã HEX #1ba0e2 đổi sang RGB là 27, 160, 226 */
+  --bs-primary-rgb: 27, 160, 226;
+}
+body {
+  font-size: larger;
+  color: #333333;
+}
+header {
+  background: #e0e0e0;
+  padding: 20px;
+  border-bottom: 3px solid #50bef1;
+}
+h1 {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+header a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: large;
+}
+main h2 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.356);
+  padding-bottom: 10px;
+}
+.bg-warning {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.icon {
+  filter: drop-shadow(
+    0 0 5px rgba(247, 181, 0, 0.8)
+  ); /* Đổ bóng màu vàng gold */
+  transform: scale(1.2); /* Phóng to nhẹ một chút */
+  margin-right: 10px;
+}

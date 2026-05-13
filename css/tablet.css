@@ -1,0 +1,22 @@
+/* ===== TABLET (max 992px) ===== */ /* File tablet.css */
+@media screen and (max-width: 992px) {
+  /* Lệnh kích hoạt: Chỉ áp dụng đống code bên trong khi màn hình nhỏ hơn hoặc bằng 992px (Cỡ iPad) */
+  .cv-container {
+    /* Vùng chứa Layout chung */
+    padding: 0 15px; /* Ép lề hai bên nhỏ lại thành 15px để tiết kiệm không gian màn hình nhỏ */
+  } /* Kết thúc */
+  .custom-nav-avatar {
+    /* Khối chứa ảnh tròn trên menu */
+    padding: 0 80px; /* Giảm đệm trái phải xuống 80px để nhường chỗ cho các link bên cạnh (do màn hình tablet bị thu hẹp) */
+  } /* Kết thúc */
+  .target, /* Select class target (không có trong HTML, có lẽ là info?) */
+  .info {
+    /* Select class info */
+    padding: 30px; /* Hạ thấp padding xuống còn 30px cho vừa vặn */
+  } /* Kết thúc */
+  /* Ẩn ô avatar trong navbar trên tablet */ /* Chú thích gốc */
+  .custom-nav-avatar {
+    /* Khối chứa ảnh tròn */
+    display: none; /* Thấy màn hình chật chội quá, quyết định hy sinh (ẩn vĩnh viễn) hình ảnh Avatar trên Tablet để giữ menu không bị rớt dòng */
+  } /* Kết thúc */
+} /* Kết thúc cụm @media cho tablet */
